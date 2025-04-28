@@ -1,0 +1,6 @@
+C:\Users\abdi\source\repos\FirstProject\Datalayer\bin\Debug\Datalayer.dll
+C:\Users\abdi\source\repos\FirstProject\Datalayer\bin\Debug\Datalayer.pdb
+C:\Users\abdi\source\repos\FirstProject\Datalayer\obj\Debug\Datalayer.csproj.AssemblyReference.cache
+C:\Users\abdi\source\repos\FirstProject\Datalayer\obj\Debug\Datalayer.csproj.CoreCompileInputs.cache
+C:\Users\abdi\source\repos\FirstProject\Datalayer\obj\Debug\Datalayer.dll
+C:\Users\abdi\source\repos\FirstProject\Datalayer\obj\Debug\Datalayer.pdb

@@ -1,0 +1,9 @@
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\FirstProject.exe.config
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\FirstProject.exe
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\FirstProject.pdb
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.AssemblyReference.cache
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.Properties.Resources.resources
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.GenerateResource.cache
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.CoreCompileInputs.cache
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.exe
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.pdb
