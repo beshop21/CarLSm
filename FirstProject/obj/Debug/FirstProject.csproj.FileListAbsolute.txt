@@ -7,3 +7,4 @@ C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.cspr
 C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.CoreCompileInputs.cache
 C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.exe
 C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.pdb
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.Form1.resources
