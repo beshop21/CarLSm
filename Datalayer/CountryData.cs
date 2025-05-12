@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Datalayer
 {
-  public  class CountryData
+  public class CountryData
     {
         public static bool GetCOuntryID(int CountryID, ref string CountryName)
         {

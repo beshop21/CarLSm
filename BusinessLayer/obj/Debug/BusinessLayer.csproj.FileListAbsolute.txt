@@ -4,3 +4,6 @@ C:\Users\abdi\source\repos\FirstProject\BusinessLayer\obj\Debug\BusinessLayer.cs
 C:\Users\abdi\source\repos\FirstProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\abdi\source\repos\FirstProject\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\abdi\source\repos\FirstProject\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\abdi\source\repos\FirstProject\BusinessLayer\bin\Debug\Datalayer.dll
+C:\Users\abdi\source\repos\FirstProject\BusinessLayer\bin\Debug\Datalayer.pdb
+C:\Users\abdi\source\repos\FirstProject\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
