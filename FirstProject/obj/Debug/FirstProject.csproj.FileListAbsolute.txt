@@ -7,4 +7,9 @@ C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.cspr
 C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.CoreCompileInputs.cache
 C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.exe
 C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.pdb
-C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.Form1.resources
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\BusinessLayer.dll
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\Datalayer.dll
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\BusinessLayer.pdb
+C:\Users\abdi\source\repos\FirstProject\FirstProject\bin\Debug\Datalayer.pdb
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstProject.FrmAddUpdate.resources
+C:\Users\abdi\source\repos\FirstProject\FirstProject\obj\Debug\FirstPro.5031491B.Up2Date

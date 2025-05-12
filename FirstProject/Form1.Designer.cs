@@ -1,6 +1,6 @@
 ﻿namespace FirstProject
 {
-    partial class Form1
+    partial class FrmAddUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -63,6 +63,9 @@
             this.lblPersonID = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.llRemoveImage = new System.Windows.Forms.LinkLabel();
+            this.llSetImage = new System.Windows.Forms.LinkLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,6 +82,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.llRemoveImage);
+            this.groupBox1.Controls.Add(this.llSetImage);
             this.groupBox1.Controls.Add(this.pbPersonImage);
             this.groupBox1.Controls.Add(this.pictureBox9);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -111,7 +116,7 @@
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Location = new System.Drawing.Point(12, 102);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1000, 316);
+            this.groupBox1.Size = new System.Drawing.Size(1000, 339);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -262,6 +267,7 @@
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Image = global::FirstProject.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(444, 281);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -270,6 +276,7 @@
             this.btnClose.TabIndex = 123;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label15
             // 
@@ -406,6 +413,7 @@
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Image = global::FirstProject.Properties.Resources.Save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(578, 281);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -414,6 +422,7 @@
             this.btnSave.TabIndex = 122;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pbPersonImage
             // 
@@ -471,7 +480,34 @@
             this.lblTitle.Text = "Add New Person";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // llRemoveImage
+            // 
+            this.llRemoveImage.AutoSize = true;
+            this.llRemoveImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llRemoveImage.Location = new System.Drawing.Point(842, 305);
+            this.llRemoveImage.Name = "llRemoveImage";
+            this.llRemoveImage.Size = new System.Drawing.Size(70, 18);
+            this.llRemoveImage.TabIndex = 142;
+            this.llRemoveImage.TabStop = true;
+            this.llRemoveImage.Text = "Remove";
+            // 
+            // llSetImage
+            // 
+            this.llSetImage.AutoSize = true;
+            this.llSetImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llSetImage.Location = new System.Drawing.Point(825, 276);
+            this.llSetImage.Name = "llSetImage";
+            this.llSetImage.Size = new System.Drawing.Size(103, 24);
+            this.llSetImage.TabIndex = 141;
+            this.llSetImage.TabStop = true;
+            this.llSetImage.Text = "Set Image";
+            this.llSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSetImage_LinkClicked);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // FrmAddUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -481,8 +517,8 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FrmAddUpdate";
+            this.Text = "FrmAddUpdate";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -539,6 +575,9 @@
         private System.Windows.Forms.Label lblPersonID;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.LinkLabel llRemoveImage;
+        private System.Windows.Forms.LinkLabel llSetImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

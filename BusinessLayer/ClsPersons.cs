@@ -13,18 +13,18 @@ namespace BusinessLayer
 
        public enum EnMode { addnew=0,update=1}
       public  EnMode Mode = EnMode.addnew;
-        int personID { set; get; }
-        string FirstName { set; get; }
-        string SecondName { set; get; }
-        string NationID { set; get; }
-        DateTime DateOFBirth { set; get; }
-        string Email { set; get; }
-        string Phone { set; get; }
-        string Address { set; get; }
-        string ImagePath { set; get; }
-        int Gendor { set; get; }
-        int CountryID { set; get; }
-        clsCountrys CountryInfo;
+    public    int personID { set; get; }
+    public    string FirstName { set; get; }
+     public   string SecondName { set; get; }
+     public   string NationID { set; get; }
+   public     DateTime DateOFBirth { set; get; }
+     public   string Email { set; get; }
+   public     string Phone { set; get; }
+    public    string Address { set; get; }
+  public      string ImagePath { set; get; }
+    public    int Gendor { set; get; }
+    public    int CountryID { set; get; }
+   public     clsCountrys CountryInfo;
 
        public CLsPesrons()
         {

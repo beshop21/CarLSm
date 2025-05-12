@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace BusinessLayer
  public   class clsCountrys
     {
 
-        int ID { set; get; }
-        string CountryName { set; get; }
+    public    int ID { set; get; }
+     public   string CountryName { set; get; }
 
         public clsCountrys()
         {
@@ -41,6 +42,11 @@ namespace BusinessLayer
                 return new clsCountrys(personID, CountryName);
             else
                 return null;
+        }
+
+        public static DataTable GetCountrys()
+        {
+            return CountryData.GetAllCountrys();
         }
     }
 }

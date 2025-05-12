@@ -425,5 +425,11 @@
   <ItemGroup>
     <None Include="Resources\Written Test 512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{14879fda-41c3-486f-8e7c-3d32d5a15cae}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

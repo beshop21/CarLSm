@@ -105,8 +105,8 @@ namespace Datalayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"INSERT INTO People (FirstName, SecondName, NationalID,DateOFBirth,Email,Phone,Addres,ImagePath,Gendor,CountryNameID)
-                             VALUES (@FirstName,@SecondName,@NationalID,@DateOFBirth,@Email,@Phone,@Addres,@ImagePath,@Gendor,@CountryNameID);
+            string query = @"INSERT INTO People (FirstName, SecondName, NationalID,DataOFBrith,Email,Phone,Addres,ImagePath,Gendor,CountryNameID)
+                             VALUES (@FirstName,@SecondName,@NationalID,@DataOFBrith,@Email,@Phone,@Addres,@ImagePath,@Gendor,@CountryNameID);
                              SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -114,10 +114,10 @@ namespace Datalayer
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
             command.Parameters.AddWithValue("@NationalID", NationalID);
-            command.Parameters.AddWithValue("@DateOFBirth", DateOFBirth);
+            command.Parameters.AddWithValue("@DataOFBrith", DateOFBirth);
             command.Parameters.AddWithValue("@Email", Email);
             command.Parameters.AddWithValue("@Phone", Phone);
-            command.Parameters.AddWithValue("@Address", Address);
+            command.Parameters.AddWithValue("@Addres", Address);
 
 
             if (ImagePath != "" && ImagePath != null)

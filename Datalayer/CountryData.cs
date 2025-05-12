@@ -76,7 +76,7 @@ namespace Datalayer
         {
             DataTable tb = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "select * fromm Countrys";
+            string query = "select * from Countrys";
             SqlCommand command = new SqlCommand(query, connection);
             try
             {
