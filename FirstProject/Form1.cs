@@ -93,6 +93,44 @@ namespace FirstProject
 
         }
 
+        private void _LoadData()
+        {
+            _personINfo = CLsPesrons.Find(_personID);
+            if (_personINfo == null)
+            {
+                MessageBox.Show("This Person ID Is Not Exist Or Delete ");
+            }
+            lblPersonID.Text = _personINfo.personID.ToString();
+            txtFirstName.Text = _personINfo.FirstName;
+            txtSecondName.Text = _personINfo.SecondName;
+            txtNationalNo.Text = _personINfo.NationID;
+            dtpDateOfBirth.Value = _personINfo.DateOFBirth;
+            txtEmail.Text = _personINfo.Email;
+            txtPhone.Text = _personINfo.Phone;
+            txtAddress.Text = _personINfo.Address;
+            if (_personINfo.ImagePath != null)
+            {
+                pbPersonImage.ImageLocation = _personINfo.ImagePath;
+            }
+
+            if (_personINfo.Gendor == 0)
+            {
+                rbMale.Checked = true;
+            }
+            else
+                rbFemale.Checked = true;
+            cbCountry.SelectedIndex = cbCountry.FindString(_personINfo.CountryInfo.CountryName);
+
+
+        }
+
+
+
+
+
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             _RestDefultValue();

@@ -69,10 +69,26 @@ namespace BusinessLayer
 
 
 
+        public static CLsPesrons Find(int ID)
+        {
+            string Firstname = "", SecondNamae = "", NationID = "", Email = "", Phone = "", Address = "", ImagePath = "";
+            DateTime DateOFbrith = DateTime.Now;
+            int CountryID = -1;
+            int Gendor = -1;
+            if (ClsPersonData.GetPersonInfoByPersonID(ID, ref Firstname, ref SecondNamae, ref NationID, ref DateOFbrith, ref Email
+                 , ref Phone, ref Address, ref ImagePath, ref Gendor, ref CountryID))
+                return new CLsPesrons(ID, Firstname, SecondNamae, NationID, DateOFbrith, Email, Phone, Address, ImagePath, Gendor, CountryID);
+            else
+                return null;
+        }
 
 
-
-
+        private bool _UpdatePerson()
+        {
+            return ClsPersonData.UpdatePerson(this.personID, this.FirstName, this.SecondName, this.NationID, this.DateOFBirth,
+             this.Email, this.Phone, this.Address, this.ImagePath, this.Gendor, this.CountryID);
+            
+        }
 
 
 

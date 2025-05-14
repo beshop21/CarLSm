@@ -158,8 +158,66 @@ namespace Datalayer
         }
 
 
+        public static bool UpdatePerson(int personID,string FirstName, string SecondName, string NationalID, DateTime DateOFBirth, string Email,
+            string Phone, string Address, string ImagePath, int Gendor, int CountryID)
+        {
 
-     
+            int NumberEffet = -1;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            string query = @"update People set FirstName=@Firstname
+                                              SecondName=@SecondName
+                                              NationalID=@NationalID
+                                              DataOFBrith=@DataOFBrith
+                                              Email=@Email
+                                              Phone=@Phone
+                                              Addres=@Addres
+                                              ImagePath=@ImagePath
+                                              Gendor=@Gendor
+                                              CountryNameID=@CountryNameID
+                                             where PersonID=@PersonID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@PersonID", personID);
+            command.Parameters.AddWithValue("@FirstName", FirstName);
+            command.Parameters.AddWithValue("@SecondName", SecondName);
+            command.Parameters.AddWithValue("@NationalID", NationalID);
+            command.Parameters.AddWithValue("@DataOFBrith", DateOFBirth);
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@Phone", Phone);
+            command.Parameters.AddWithValue("@Addres", Address);
+
+
+            if (ImagePath != "" && ImagePath != null)
+                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+            else
+                command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+
+            command.Parameters.AddWithValue("@Gendor", Gendor);
+
+
+            command.Parameters.AddWithValue("CountryNameID", CountryID);
+
+            try
+            {
+
+                connection.Open();
+                NumberEffet = command.ExecuteNonQuery();
+
+
+
+
+
+
+            }catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (NumberEffet > 0);
+        }
+
 
 
 
