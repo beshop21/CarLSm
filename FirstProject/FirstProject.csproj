@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CTRWithFillter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CTRWithFillter.Designer.cs">
+      <DependentUpon>CTRWithFillter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFIndPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmFIndPerson.Designer.cs">
+      <DependentUpon>FrmFIndPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons\CTRPersnInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Persons\CTRPersnInfo.Designer.cs">
+      <DependentUpon>CTRPersnInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons\UpdateAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persons\UpdateAdd.Designer.cs">
+      <DependentUpon>UpdateAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CTRWithFillter.resx">
+      <DependentUpon>CTRWithFillter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFIndPerson.resx">
+      <DependentUpon>FrmFIndPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persons\CTRPersnInfo.resx">
+      <DependentUpon>CTRPersnInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persons\UpdateAdd.resx">
+      <DependentUpon>UpdateAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -430,6 +457,9 @@
       <Project>{14879fda-41c3-486f-8e7c-3d32d5a15cae}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

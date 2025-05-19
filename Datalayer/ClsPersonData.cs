@@ -18,7 +18,7 @@ namespace Datalayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT * FROM People WHERE NationalNo = @NationalNo";
+            string query = "SELECT * FROM People WHERE PersonID = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -40,11 +40,11 @@ namespace Datalayer
                     NationalNo = (string)reader["NationalID"];
 
 
-                    DateOFBirth = (DateTime)reader["DateOfBirth"];
+                    DateOFBirth = (DateTime)reader["DataOfBrith"];
                     Email = (string)reader["Email"];
                    
                     Phone = (string)reader["Phone"];
-                    Address = (string)reader["Address"];
+                    Address = (string)reader["Addres"];
                     //Email: allows null in database so we should handle null
                     if (reader["ImagePath"] != DBNull.Value)
                     {
@@ -57,9 +57,9 @@ namespace Datalayer
 
 
 
-                    Gendor = (byte)reader["Gendor"];
+                    Gendor = (int)reader["Gendor"];
 
-                    CountryiD = (int)reader["CoutryNameID"];
+                    CountryiD = (int)reader["CountryNameID"];
 
                     //ImagePath: allows null in database so we should handle null
                     if (reader["ImagePath"] != DBNull.Value)
@@ -95,8 +95,88 @@ namespace Datalayer
             return isFound;
         }
 
+        public static bool GetPersonInfoByPersonNationa(string NationalNo, ref int PersonID, ref string firstName, ref string SecondName, ref DateTime DateOFBirth,
+           ref string Email, ref string Phone, ref string Address, ref string ImagePath, ref int Gendor, ref int CountryiD)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select * from People where nationalID=@nationalID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("nationalID", NationalNo);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // The record was found
+                    isFound = true;
+
+                    PersonID = (int)reader["PersonID"];
+                    firstName = (string)reader["FirstName"];
+                    SecondName = (string)reader["SecondName"];
+                 
+
+                    DateOFBirth = (DateTime)reader["DataOFBrith"];
+                    Email = (string)reader["Email"];
+
+                    Phone = (string)reader["Phone"];
+                    Address = (string)reader["Addres"];
+                    //Email: allows null in database so we should handle null
+                    if (reader["ImagePath"] != DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
 
 
+
+                    Gendor = (int)reader["Gendor"];
+
+                    CountryiD = (int)reader["CountryNameID"];
+
+                    //ImagePath: allows null in database so we should handle null
+                    if (reader["ImagePath"] != DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
         public static int AddNewPerson(string FirstName, string SecondName,string NationalID,DateTime DateOFBirth,string Email,
             string Phone,string Address,string ImagePath,int Gendor,int CountryID)
         {

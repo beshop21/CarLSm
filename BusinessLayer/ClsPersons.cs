@@ -81,7 +81,19 @@ namespace BusinessLayer
             else
                 return null;
         }
-
+        public static CLsPesrons Find(string name)
+        {
+            int personID = -1;
+            string Firstname = "", SecondNamae = "", Email = "", Phone = "", Address = "", ImagePath = "";
+            DateTime DateOFbrith = DateTime.Now;
+            int CountryID = -1;
+            int Gendor = -1;
+            if (ClsPersonData.GetPersonInfoByPersonNationa(name, ref personID, ref Firstname, ref SecondNamae, ref DateOFbrith,
+                 ref Email, ref Phone, ref Address, ref ImagePath, ref Gendor, ref CountryID))
+                return new CLsPesrons(personID, Firstname, SecondNamae, name, DateOFbrith, Email, Phone, Address, ImagePath, Gendor, CountryID);
+            else
+                return null;
+        }
 
         private bool _UpdatePerson()
         {
@@ -107,6 +119,9 @@ namespace BusinessLayer
 
                     else
                         return false;
+
+                case EnMode.update:
+                    return _UpdatePerson();
             }
 
             return false;

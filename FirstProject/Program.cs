@@ -16,7 +16,7 @@ namespace FirstProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddUpdate());
+            Application.Run(new FrmFIndPerson());
         }
     }
 }

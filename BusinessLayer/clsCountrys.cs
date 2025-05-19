@@ -21,10 +21,10 @@ namespace BusinessLayer
 
         }
 
-        private clsCountrys(int id,string Countryname)
+        private clsCountrys(int id,string countryname)
         {
             this.ID = id;
-            this.CountryName = CountryName;
+            this.CountryName = countryname;
         }
         public static clsCountrys Find(int ID)
         {
